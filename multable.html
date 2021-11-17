@@ -1,0 +1,51 @@
+<!--
+File: multable.html
+GUI Assignment: Creating a dynamic table
+Evan LeBlanc, UMass Lowell Computer Science, Evan_LeBlanc@student.uml.edu
+Copyright (c) 2021 by Evan. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by EL on October 23, 2021 at 10:10 PM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/multtable.css">
+        <title>Interactive Dynamic Table</title>
+        
+    </head>
+<body>
+    <h1>Interactive Dynamic Table</h1>
+
+<!--Form created for taking in the information from the user-->
+    <form id="multTable">
+           <label for="MinCol">1. Min Column</label>
+            <input type="number" id="minC" name="minCol" placeholder="Minimum Number" value="" required>
+
+            <label for="MaxCol">2. Max Column</label>
+             <input type="number" id="maxC" name="maxCol" placeholder="Maximum Number" value="" required>
+        
+            <label for="MinRow">3. Min Row</label>
+             <input type="number" id="minR" name="minRow" placeholder="Minimum Row" value="" required>
+        
+            <label for="MaxRow">4. Max Row</label>
+             <input type="number" id="maxR" name="maxRow" placeholder="Maximum Row" value="" required>
+        
+            <button type = "button" id ="btn" onclick="makeTable()">Click to submit</button>
+            
+
+    </form>
+
+    <!--span is used for user error, div is used for creating the table-->
+    <div id="error"></div>
+
+    <div id ="myTable" style="max-width: 250px; max-height: 250px; margin-left: 850px; margin-bottom: 500px; overflow:auto;"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/additional-methods.min.js"></script>
+    <script src="js/multTable.js"></script>
+
+
+</body>
+</html>
