@@ -1,12 +1,7 @@
 //This function is supposed to look at the validation of the users input
-function makeTable() {
-
 $(document).ready(function() {
     
     $("#multTable").validate({
-        errorContainer: "#error",
-        errorLabelContainer: "#error",
-        wrapper:"ol",
         rules: {
             minCol: {
                 number: true,
@@ -59,20 +54,25 @@ $(document).ready(function() {
     });
 
 });
- 
-if ( !($("#multTable").valid)) {
-    return false;
+
+function makeTable() {
+    if ( !($("#multTable").valid)) {
+        return false;
+        
+     }
+     else{
+         usrTable();
+     }
+
 }
-else{
-    usrTable();
-}
-
-
-}
-
-
  function usrTable(){
+/*
+    function tab() {
+        var tabcnt = $("#tab li").length + 1;
+        
 
+    }
+*/
 //Getting user information on the min and max of row and column and putting them into variables
 var minCol = document.getElementById("minC").value;
 var maxCol = document.getElementById("maxC").value;
